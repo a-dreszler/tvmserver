@@ -1,0 +1,305 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    scroll-padding-top: calc(92px + 1rem);
+}
+
+:root {
+    --heading-color1: #660066;
+    --background-color1: #f1cbf113;
+    --text-color1: #000000;
+    --TVM-color: #ff6600;
+    --silver:  #808080;
+    --gold: #FF8C00;
+    --diamond: #0000CD;
+    --uranium: #006400;
+    --border-color1: #4d004d;
+    --nav-hover-background: #ffffff;
+}
+
+@font-face {
+    font-family: minecraftFont;
+    src: url(Minecraft.ttf) format('truetype');
+}
+
+html {
+    
+    font-family: minecraftFont;
+    font-size: 16px;
+    color: var(--text-color1);
+}
+
+.TVM {
+    color: var(--TVM-color);
+}
+
+h1 {
+    text-align: center;
+    white-space: nowrap;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 120px;
+    position: fixed;
+    background-color: var(--heading-color1);
+    color: white;
+    width: 100%;
+}
+
+header a {
+    color: white;
+}
+
+#nav-bar {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-list li {
+    display: flex;
+    width: 25%;
+    height: 52px;
+    padding: 0.4rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link {
+    color: inherit;
+}
+.nav-list li:hover {
+    background-color: var(--nav-hover-background);
+    color: var(--heading-color1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    width: 305px;
+}
+
+#video {
+    display: block;
+    margin: 0.5rem auto;
+    width: 80%;
+    aspect-ratio: 2 / 1;
+    border: none;
+}
+
+body {
+    background-color: var(--background-color1);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 120px;
+}
+
+.info-desc, .vip-desc {
+    text-align: center;
+    margin: 1rem auto;
+}
+
+#server-info {
+    grid-column: 1 / -1;
+}
+
+.info-text, .vip-text, .download-text {
+    margin: 0.5em 1em 1em;
+}
+
+#header-img {
+    width: 60px;
+    display: inline-block;
+}
+
+.vip-list {
+    list-style-type: square;
+    margin: -1em 2em 1em;
+}
+
+#pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.pricing {
+    display: flex;
+    width: 300px;
+    height: 645px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    border: 2px solid var(--border-color1);
+    margin: 1rem;
+}
+
+.list-description {
+    margin: 1em;
+}
+
+.pricing-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.benefit-list {
+    height: 40%;
+    margin: 0 1rem;
+}
+
+.benefit-list:last-of-type {
+    margin-bottom: 1em;
+}
+
+.newsletter-desc {
+    text-align: center;
+    margin: 1rem;
+}
+
+label {
+    display: block;
+    text-align: center;
+    margin: 1em 1em;
+}
+
+input {
+    display: block;
+    padding: 0.3em;
+    margin: 1em auto;
+    border-radius: 0;
+    border: 3px solid var(--border-color1);
+}
+
+button {
+    display: block;
+    padding: 0.5em;
+    border-radius: 0;
+    font-family: minecraftFont;
+    background-color: var(--heading-color1);
+    color: #ffffff;
+    border: 3px solid var(--border-color1);
+}
+
+form > button {
+    margin: 1em auto;
+}
+
+.select-button:active {
+    color: var(--TVM-color);
+}
+
+p {
+    line-height: 1.3em;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#silver, #gold, #diamond, #uranium {
+    width: 200px;
+    height: 200px;
+}
+
+.silver {
+    color: var(--silver);
+}
+
+.gold {
+    color: var(--gold);
+}
+
+.diamond {
+    color: var(--diamond);
+}
+
+.uranium {
+    color: var(--uranium);
+}
+
+.price {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+@media (min-width: 700px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 92px;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .logo-container {
+        margin: 1rem;
+    }
+
+    #nav-bar {
+        margin: 1rem;
+    }
+
+    main {
+        grid-template-columns: 1fr 2fr;
+        width: 80%;
+        max-width: 1540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #server-info {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-column: 1 / -1;
+    }
+
+    #pricing {
+        grid-column: 1 / -1;
+    }
+
+    #vip-benefits {
+        grid-column: 1 / -1;
+    }
+
+    #newsletter-form {
+        grid-column: 1 / -1;
+    }
+
+    #video {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) {
+    #pricing {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
